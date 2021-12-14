@@ -1,0 +1,28 @@
+#%RAML 1.0
+title: salesreport
+description: sales report of a day
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/sources/vcs/projects/6e162539-2c43-4983-abff-8a5a3d0f48ec/salesreport/m/read-productDetails?productTitle=5555
+/read-productDetails:
+
+  get:
+    queryParameters:
+      productTitle:
+        description: "productid"
+        required: true
+        type: string
+        example:
+          "5555"
+    responses:
+      200:
+        body:
+          application/json:
+           example:
+             {
+               "product": [
+                 {
+                 "productid":"55555",
+                 "productName":"qwert"
+                 }
+               ]
+             }
+            
